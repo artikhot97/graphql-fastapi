@@ -1,1 +1,29 @@
-venv
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.env.*
+.DS_Store
+.idea/
+.vscode/
+*.sqlite3
+# VSCode settings
+.history/
+# Python egg files
+*.egg-info/
+.eggs/
+# Test and coverage outputs
+.coverage
+htmlcov/
+.tox/
+.pytest_cache/
+# Local data
+*.local
+# Backup files
+*~
+# MacOS
+*.DS_Store
+# Windows
+Thumbs.db
