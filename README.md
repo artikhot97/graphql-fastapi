@@ -3,7 +3,9 @@
 This repository demonstrates a production-style FastAPI project integrated with:
 
 ✅ Strawberry GraphQL — for clean, type-safe GraphQL APIs
+
 ✅ DataLoader — for efficient batching and per-request caching (solve the N+1 problem)
+
 ✅ Modular structure — for scalable domains like Posts, Users, Tags, and Books (including AI/ML books)
 
 🔍 What you'll find inside:
