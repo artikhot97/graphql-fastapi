@@ -1,4 +1,4 @@
-# graphql-fastapi
+<img width="1916" height="938" alt="image" src="https://github.com/user-attachments/assets/bb7612e0-4bf6-4fd6-8046-376f7a781598" /># graphql-fastapi
 
 A FastAPI project demonstrating GraphQL integration with Strawberry, DataLoader batching, and a modular structure for social media posts, users, tags, and books (including AI/ML books).
 
@@ -87,10 +87,10 @@ The Books API allows you to fetch all books or search for books by title, author
 
 #### Fetch all books
 ```graphql
-{
+query MyQuery {
   fetchBooks {
-    title
     author
+    title
     description
   }
 }
@@ -98,32 +98,28 @@ The Books API allows you to fetch all books or search for books by title, author
 
 #### Search books
 ```graphql
-{
+query MyQuery {
   searchBooks(searchText: "AI") {
-    title
     author
     description
+    title
   }
 }
 ```
 
-### Screenshot: Fetch All Books
-
-![Fetch All Books](screenshots/fetch-all-books.png)
-
-### Screenshot: Search Books
-
-![Search Books](screenshots/search-books.png)
 
 ## Screenshots
 
 Below are some screenshots of the GraphQL Playground in action:
 
-### Search Books by AI
-![Search Books by AI](screenshots/search-books-ai.png)
+### Screenshot: Search Books
+
+<img width="1914" height="714" alt="image" src="https://github.com/user-attachments/assets/436a5dd7-d43b-41a1-b546-58328690e830" />
+
 
 ### Fetch All Books
-![Fetch All Books](screenshots/fetch-all-books.png)
+<img width="1914" height="955" alt="image" src="https://github.com/user-attachments/assets/586bd794-3c1d-4c94-a584-3e7888be1360" />
+
 
 ## 📝 Post API
 
@@ -133,44 +129,56 @@ The Post API allows you to fetch all posts, including their users and tags, usin
 
 #### Fetch all posts with user and tags
 ```graphql
-{
+query MyQuery {
   getPosts {
-    id
-    title
     content
-    user {
-      name
-      description
-    }
+    id
     tagObjects {
       name
+      id
     }
+    title
     userId
+    user {
+      id
+      name
+    }
   }
 }
 ```
 
 #### Fetch post detail by ID
 ```graphql
-{
-  getPostDetail(postId: 1) {
+query MyQuery {
+  getPostDetail(postId: 4) {
     content
+    id
+    title
+    user {
+      description
+      id
+      name
+    }
+    userId
     tagObjects {
       name
       postIds
+      id
+      description
     }
-    title
   }
 }
 ```
 
 ### Screenshot: Get Posts
 
-![Get Posts](screenshots/get-posts.png)
+<img width="1907" height="952" alt="image" src="https://github.com/user-attachments/assets/24b8d0a7-2e84-4068-af4c-15a206a9cdab" />
+
 
 ### Screenshot: Get Post Detail
 
-![Get Post Detail](screenshots/get-post-detail.png)
+<img width="1916" height="938" alt="image" src="https://github.com/user-attachments/assets/dfcf96bf-8645-4cb4-bef3-631fab5e4dc1" />
+
 
 ## User API
 
@@ -180,11 +188,10 @@ The User API allows you to fetch user information using GraphQL queries. You can
 
 **Sample Query:**
 ```graphql
-query {
+query MyQuery {
   fetchUsers {
     id
     name
-    description
   }
 }
 ```
@@ -194,9 +201,27 @@ query {
 {
   "data": {
     "fetchUsers": [
-      { "id": 1, "name": "Alice", "description": "User Alice" },
-      { "id": 2, "name": "Bob", "description": "User Bob" },
-      // ...more users
+      {
+        "id": 1,
+        "name": "Alice"
+      },
+      {
+        "id": 2,
+        "name": "Bob"
+      },
+      {
+        "id": 3,
+        "name": "Charlie"
+      },
+      {
+        "id": 4,
+        "name": "Diana"
+      },
+      {
+        "id": 5,
+        "name": "Eve"
+      },
+      ......
     ]
   }
 }
@@ -204,7 +229,35 @@ query {
 
 **Screenshot:**
 
-![fetchUsers Screenshot](./screenshots/fetchUsers.png)
+<img width="1910" height="934" alt="image" src="https://github.com/user-attachments/assets/252eb21c-c4c8-45b0-80e2-c7dbe7c5b60b" />
+
+
+### FetchUserById
+**Sample Query:**
+```
+query MyQuery {
+  fetchUserById(userId: 10) {
+    id
+    name
+    description
+  }
+}
+```
+**Sample Response:**
+```
+{
+  "data": {
+    "fetchUserById": {
+      "id": 10,
+      "name": "Judy",
+      "description": "User Judy"
+    }
+  }
+}
+```
+
+<img width="1899" height="707" alt="image" src="https://github.com/user-attachments/assets/274a7bc8-e960-416e-b29a-a712516baec5" />
+
 
 ---
 
