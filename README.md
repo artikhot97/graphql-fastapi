@@ -1,6 +1,30 @@
 # graphql-fastapi
 
-A FastAPI project demonstrating GraphQL integration with Strawberry, DataLoader batching, and a modular structure for social media posts, users, tags, and books (including AI/ML books).
+This repository demonstrates a production-style FastAPI project integrated with:
+
+✅ Strawberry GraphQL — for clean, type-safe GraphQL APIs
+✅ DataLoader — for efficient batching and per-request caching (solve the N+1 problem)
+✅ Modular structure — for scalable domains like Posts, Users, Tags, and Books (including AI/ML books)
+
+🔍 What you'll find inside:
+
+Sample GraphQL queries & mutations for real-world use cases
+
+Optimized resolvers using DataLoader to prevent redundant DB calls
+
+Well-organized modules for each domain (users, posts, tags, books)
+
+Async-friendly code with FastAPI’s best practices
+
+🚀 Ideal for:
+
+Backend engineers learning GraphQL in Python
+
+Teams exploring DataLoader batching in real-world GraphQL APIs
+
+FastAPI + Strawberry integration examples
+
+Developers interested in modular API architecture
 
 ## Features
 - FastAPI + Strawberry GraphQL integration
