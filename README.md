@@ -8,6 +8,7 @@ This repository demonstrates a production-style FastAPI project integrated with:
 
 ✅ Modular structure — for scalable domains like Posts, Users, Tags, and Books (including AI/ML books)
 
+
 🔍 What you'll find inside:
 
 Sample GraphQL queries & mutations for real-world use cases
