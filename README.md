@@ -1,4 +1,4 @@
-<img width="1916" height="938" alt="image" src="https://github.com/user-attachments/assets/bb7612e0-4bf6-4fd6-8046-376f7a781598" /># graphql-fastapi
+# graphql-fastapi
 
 A FastAPI project demonstrating GraphQL integration with Strawberry, DataLoader batching, and a modular structure for social media posts, users, tags, and books (including AI/ML books).
 
